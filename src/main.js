@@ -5,9 +5,10 @@ import App from './App'
 import router from './router'
 /*  三百毫秒点击延迟问题，在使用click事件时，会延迟300毫秒  */
 import fastClick from 'fastclick'
-import './assets/styles/reset.css'
+import 'styles/reset.css'
 /*  一像素边框解决方案  scale放大缩小来解决  */
-import './assets/styles/border.css'
+import 'styles/border.css'
+import 'styles/iconfont.css'
 
 Vue.config.productionTip = false
 /*  将fastclick自带的方法绑定到body上，   三步1安装2引入3绑定  */
