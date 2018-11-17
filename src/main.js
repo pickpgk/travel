@@ -7,6 +7,7 @@ import router from './router'
 import fastClick from 'fastclick'
 // 轮播插件
 import VueAwesomeSwiper from 'vue-awesome-swiper'
+import store from './store'
 import 'styles/reset.css'
 /*  一像素边框解决方案  scale放大缩小来解决  */
 import 'styles/border.css'
@@ -19,9 +20,11 @@ fastClick.attach(document.body)
 Vue.use(VueAwesomeSwiper)
 
 /* eslint-disable no-new */
+// 跟实例里的库，可以派发到各个子组件
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
   template: '<App/>'
 })
