@@ -1,7 +1,9 @@
 <template>
   <div id="app">
-
-    <router-view/>
+    <!-- <keep-alive>这个标签包裹让ajax只请求一次 -->
+    <keep-alive>
+      <router-view/>
+    </keep-alive>
   </div>
 </template>
 
