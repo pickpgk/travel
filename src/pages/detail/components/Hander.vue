@@ -39,6 +39,10 @@ export default {
   },
   activated () {
     window.addEventListener('scroll', this.handleScroll)
+  },
+  // 页面即将被新的页面替换时执行
+  deactivated () {
+    window.removeEventlistener('scroll', this.handleScroll)
   }
 }
 </script>
@@ -59,6 +63,7 @@ export default {
       color #fff
       font-size .4rem
   .hander-fixed
+    z-index 2
     position: fixed
     top 0
     left 0
