@@ -20,5 +20,9 @@ export default new Router({
     path: '/detail/:id',
     name: 'Detail',
     component: Detail
-  }]
+  }],
+  // scrollBehavior  意思是每次做路由切换时，都让新进入的显示页面Xy轴初始位置为零
+  scrollBehavior (to, from, savedPosition) {
+    return { x: 0, y: 0 }
+  }
 })
